@@ -1,7 +1,7 @@
-# CircuitPythonAssignments
+## CircuitPythonAssignments
 This is a repository for all of my Circuit Python assignments.
 
-CircuitPython Servo Assignment:
+# CircuitPython Servo Assignment:
 
 Objective:
 In this assignment, I had to wire up a servo to my metro express, and write code in CircuitPython to command the servo to rotate 180 degrees. 
@@ -11,3 +11,12 @@ I had a lot of trouble with this assignment, as I haven't coded since last year,
 
 Wiring: 
 I don't know how to put an image into github yet, or how to access fritzing. It says I have to pay to download.
+
+
+# CircuitPython Photointerrupters assignment:
+
+Objective:
+In this assignment, I had to wire up my Metro Express to my photointerrupter, and command the photointerrupter to track how many times it had been interrupted. 
+
+Problems:
+I had never wired a photointerrupter to a Metro express, so I had to look that part up. I had written my code, and I was pretty sure it was right, but it still wasn't working. After a few days of being stuck, I finally figured out that my wiring was to blame. I had mixed up my negative and positive terminals on my breaboard, and after I switched them, it began to work. I  had tunnel vision on my code, and should have taken a step back to look at all of my pieces, not just the code.
