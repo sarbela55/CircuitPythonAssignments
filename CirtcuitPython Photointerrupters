@@ -1,0 +1,30 @@
+
+import time 
+import board
+
+Interrupter = DigitalInOut(board.D7)
+Interrupter.direction = Direction.INPUT
+Interrupter.pull = Pull.UP
+
+Photo = True
+
+State = True
+
+Counter = 0
+
+Max = 4
+
+while True:
+
+    State = Photo
+    Photo = Interrupter.value
+    # If line 50 and 51 switch, the code doesn't work.
+
+    if Photo and not State:
+            Counter += 1
+
+    Remaining = Max - time.time()
+
+    if Remaining <= 0:  # (==) does not work.
+        print("Interrupts:" + str(Counter)) # A (,) would not work.
+        Max = time.time() + 4
