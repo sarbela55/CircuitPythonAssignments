@@ -1,24 +1,61 @@
+from digitalio import DigitalInOut, Direction, Pull
 
-import time 
+import time  # Used in start = time.time.
 import board
 
+
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+from lcd.lcd import LCD
+
+i2c = board.I2C()
+i2c.unlock() 
+
+device_address = None
+
+while not i2c.try_lock():
+    pass  
+
+try:
+    while not device_address:
+        device_address_list = i2c.scan()
+        device_address = device_address_list[0]
+        print("I2C interface found at: ", hex(device_address))
+        time.sleep(2)
+
+finally:
+    i2c.unlock()
+    i2c.deinit()
+    # This releases the SCL (Serial Clock Wire) pin so that the LCD can use it.
+
+lcd = LCD(I2CPCF8574Interface(device_address), num_rows=2, num_cols=16)
+
+
 Interrupter = DigitalInOut(board.D7)
+# Created a variable for the interrupter.
+# D7 is an I/O (Input/Output) pin.
+
 Interrupter.direction = Direction.INPUT
+
 Interrupter.pull = Pull.UP
 
 Photo = True
 
 State = True
 
+lcd.print("LCD Go.")
+
+time.sleep(2)  
+
+lcd.clear()
+
 Counter = 0
 
-Max = 4
+Max = 7
 
 while True:
 
     State = Photo
     Photo = Interrupter.value
-    # If line 50 and 51 switch, the code doesn't work.
 
     if Photo and not State:
             Counter += 1
@@ -26,5 +63,10 @@ while True:
     Remaining = Max - time.time()
 
     if Remaining <= 0:  # (==) does not work.
-        print("Interrupts:" + str(Counter)) # A (,) would not work.
-        Max = time.time() + 4
+        lcd.clear()
+        print("Interrupts:" + str(Counter))
+        lcd.print("Breaks:" + str(Counter))
+
+  
+
+        Max = time.time() + 5
