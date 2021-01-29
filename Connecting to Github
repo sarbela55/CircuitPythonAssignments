@@ -1,0 +1,10 @@
+This is my code for the Connecting to Github assignment:
+
+
+while True:
+    led.high()
+    time.sleep(0.5)
+    led.low()
+    time.sleep(0.5)
+    
+    Link to my wiring picture: file:///home/chronos/u-9a17e9c2c988ab97fc1b813debee48ab1b976ba4/MyFiles/Camera/IMG_20210129_143432.jpg 
