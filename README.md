@@ -47,5 +47,5 @@ Issues: I only had 5 resistors for some reason, so I had to wait for my dad to c
 
 Things I learned: Using lists made it much easier for me to write my code in a more efficient and space saving manner. 
 
-Wiring: 
-![FancyLED](file:///home/chronos/u-9a17e9c2c988ab97fc1b813debee48ab1b976ba4/MyFiles/Downloads/Screenshot%202021-01-30%20at%2012.11.51%20AM.png)
+Wiring:
+file:///home/chronos/u-9a17e9c2c988ab97fc1b813debee48ab1b976ba4/MyFiles/Downloads/Screenshot%202021-01-30%20at%2012.11.51%20AM.png
