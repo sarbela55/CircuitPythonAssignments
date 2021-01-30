@@ -1,0 +1,91 @@
+
+
+import pulseio
+
+import time
+
+
+class RGB_PWM:
+    def __init__(self, red_pin, green_pin, blue_pin):
+       
+        self.r = pulseio.PWMOut(red_pin, frequency=50)
+
+        self.g = pulseio.PWMOut(green_pin, frequency=50)
+        self.b = pulseio.PWMOut(blue_pin, frequency=50)
+
+    def red(self):
+        self.r.duty_cycle = 0
+        self.g.duty_cycle = 65535
+        self.b.duty_cycle = 65535
+
+    def magenta(self):
+        self.r.duty_cycle = 0
+        self.g.duty_cycle = 65535
+        self.b.duty_cycle = 0
+
+    def blue(self):
+        self.r.duty_cycle = 65535
+        self.g.duty_cycle = 65535
+        self.b.duty_cycle = 0
+
+    def cyan(self):
+        self.r.duty_cycle = 65535
+        self.g.duty_cycle = 0
+        self.b.duty_cycle = 0
+
+    def green(self):
+        self.r.duty_cycle = 65535
+        self.g.duty_cycle = 0
+        self.b.duty_cycle = 65535
+
+    def yellow(self):
+        self.r.duty_cycle = 0
+        self.g.duty_cycle = 0
+        self.b.duty_cycle = 65535
+
+    def dark(self):
+        self.r.duty_cycle = 65535
+        self.g.duty_cycle = 65535
+        self.b.duty_cycle = 65535
+
+
+    def orange(self):
+        self.r.duty_cycle = 0
+        self.g.duty_cycle = 42732
+
+        self.b.duty_cycle = 65535
+
+    def indigo(self):
+        self.r.duty_cycle = 52069
+        self.g.duty_cycle = 65535
+        self.b.duty_cycle = 42194
+
+    def violet(self):
+        self.r.duty_cycle = 38962
+        self.g.duty_cycle = 65535
+        self.b.duty_cycle = 27650
+
+
+    def rainbow(self, rate: float):
+    
+
+        self.red()
+      
+        time.sleep(1.0 / rate)
+        self.orange()
+        time.sleep(1.0 / rate)
+        self.yellow()
+        time.sleep(1.0 / rate)
+        self.green()
+        time.sleep(1.0 / rate)
+        self.blue()
+        time.sleep(1.0 / rate)
+        self.indigo()
+        time.sleep(1.0 / rate)
+        self.violet()
+        time.sleep(1.0 / rate)
+
+    def custom_color(self, r_set, g_set, b_set):
+        self.r.duty_cycle = r_set
+        self.g.duty_cycle = g_set
+        self.b.duty_cycle = b_set
