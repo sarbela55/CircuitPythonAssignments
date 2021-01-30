@@ -47,4 +47,5 @@ Issues: I only had 5 resistors for some reason, so I had to wait for my dad to c
 
 Things I learned: Using lists made it much easier for me to write my code in a more efficient and space saving manner. 
 
-Wiring: ![FancyLED Original Circuit Diagram](./Luke-Engineering_III-FancyLED_Origonal_Circuit_Diagram.png)
+Wiring: 
+![FancyLED](<img src="https://cvilleschools.instructure.com/courses/31069/files/1890742/download?wrap=1" alt="fancyleds"/>)
