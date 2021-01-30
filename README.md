@@ -31,3 +31,11 @@ What it does:
 The TRIG pin communicates with the sensor to send out an ultrasonic wave, which can sense how far away an object is from the sensor. The wave bounces back, and the echo pin recieves this wave, and tells the servo how far away the object is. The GND pin is like all other ground pins on other sensors, and the VCC pin accounts for the power supplied to the sensor.
 
 I used Luke Frank's diagram to help me configure my wiring.(https://github.com/lfrank01/CircuitPython/blob/main/CircuitPython_Distance_Sensor/Luke-Engineering_III-CircuitPython_Distance_Sesnor-Circuit_Diagram.pdf)
+
+
+# Classes, Objects, and Modules assignment:
+
+objective: Use the given code and add pieces to make it work. This is intended to make it easier to use RGB LEDs. 
+
+Problems: Wiring up the RGB LED was easy, but I didn't really know what numbers to fill in for the different time slots. I learned that different combinations can produce different hues of a color on the RGB LEd, and that setting a pin to a certian number can turn off the different colors in the LED.
+
