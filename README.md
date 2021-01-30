@@ -39,3 +39,12 @@ objective: Use the given code and add pieces to make it work. This is intended t
 
 Problems: Wiring up the RGB LED was easy, but I didn't really know what numbers to fill in for the different time slots. I learned that different combinations can produce different hues of a color on the RGB LEd, and that setting a pin to a certian number can turn off the different colors in the LED.
 
+# FancyLED Assignment:
+
+Objective: Create a library that works with all 6 LEDs, and make the given code work.
+
+Issues: I only had 5 resistors for some reason, so I had to wait for my dad to come back the next day with one from his work. 
+
+Things I learned: Using lists made it much easier for me to write my code in a more efficient and space saving manner. 
+
+Wiring: ![FancyLED Original Circuit Diagram](./Luke-Engineering_III-FancyLED_Origonal_Circuit_Diagram.png)
